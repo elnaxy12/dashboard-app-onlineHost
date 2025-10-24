@@ -1,0 +1,958 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #44444e;
+    cursor: default;
+    transition: background-color 0.5s ease;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.wrapper .col {
+    display: flex;
+}
+
+.wrapper .col .side-bar-left {
+    width: 15%;
+}
+
+.wrapper .col .side-bar-left .col-1 {
+    margin-bottom: 5px;
+}
+
+.wrapper .col .side-bar-left .col-1 .logo {
+    display: flex;
+    align-items: center;
+    font-weight: 450;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    font-size: 16px;
+    gap: 5px;
+}
+
+.wrapper .col .side-bar-left .col-2 {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(41, 38, 38, 0.2);
+    padding-bottom: 10px;
+    gap: 5px;
+}
+
+.wrapper .col .side-bar-left .col-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.wrapper .col .side-bar-left .col-2 p,
+.wrapper .col .side-bar-left .col-3 p {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.wrapper .col .side-bar-left .col-2 p.dark-mode:hover,
+.wrapper .col .side-bar-left .col-3 p.dark-mode:hover {
+    background: linear-gradient(to left, rgb(27, 60, 83), rgb(11, 30, 44));
+}
+
+.wrapper .col .side-bar-left .col-2 p:hover,
+.wrapper .col .side-bar-left .col-3 p:hover {
+    background: linear-gradient(
+        to left,
+        rgb(253, 207, 250, 0.01),
+        rgb(253, 207, 250, 0.2)
+    );
+}
+
+.wrapper .col .main-content {
+    width: 100%;
+    background: linear-gradient(
+        to top,
+        rgb(215, 143, 238, 0.01),
+        rgb(253, 207, 250, 0.5)
+    );
+    padding-left: 5pc;
+    padding-bottom: 5pc;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: background 0.5s ease;
+}
+
+body.dark-mode {
+    background-color: #1b3c53;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.wrapper .col .main-content.dark-mode {
+    background: linear-gradient(to top, rgb(27, 60, 83), rgb(11, 30, 44));
+    transition: background 0.5s ease;
+}
+
+.chart-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.wrapper
+    .col
+    .main-content
+    .col-3
+    .card-height
+    .row-3
+    .chart-wrapper.users-chart.dark-mode,
+.wrapper
+    .col
+    .main-content
+    .col-3
+    .card-height
+    .row-3
+    .chart-wrapper.subscriptions-chart.dark-mode,
+.wrapper .col .main-content .content .col-3 .card-height.dark-mode,
+.wrapper .col .mid-content .col-1 .card-width.user-activity.dark-mode,
+.wrapper .col .mid-content .col-1 .card-width.sales-dynamics.dark-mode,
+.wrapper .col .main-content .content .card.dark-mode,
+.wrapper .col .mid-content .col-2 .row-1 .card.paid-invoice.dark-mode,
+.wrapper .col .mid-content .col-2 .row-1 .card.funds-received.dark-mode,
+.wrapper .col .mid-content .col-2 .row-2 .card-width.customes-order.dark-mode,
+.wrapper
+    .col
+    .mid-content
+    .col-1
+    .card-width
+    .row-1
+    #SalesdynamicsSelect
+    .dropdown-items.dark-mode,
+.wrapper
+    .col
+    .mid-content
+    .col-1
+    .card-width
+    .row-1
+    #SalesLineSelect
+    .dropdown-items.dark-mode {
+    color: white;
+    background-color: rgb(33, 43, 52);
+    transition: all 0.5s ease;
+}
+
+/* Awalnya black -> diganti jadi white */
+.wrapper .col .main-content .col-1 .card .row-2 p span {
+    color: white;
+    transition: color 0.5s ease;
+}
+
+.wrapper .col .main-content .col-1 .card.dark-mode .row-1 p,
+.wrapper .col .main-content .col-2 .card.dark-mode .row-1 p,
+.wrapper
+    .col
+    .main-content
+    .col-1
+    .card.dark-mode
+    .row-2
+    p.indicator-order.dark-mode,
+.wrapper
+    .col
+    .main-content
+    .col-2
+    .card.dark-mode
+    .row-2
+    p.indicator-order.dark-mode,
+.wrapper .col .main-content .col-1 .card.dark-mode .row-2 p span.dark-mode,
+.wrapper .col .main-content .col-2 .card.dark-mode .row-2 p span.dark-mode,
+.wrapper .col .main-content .col-2 .card.dark-mode .row-1 svg.dark-mode,
+.wrapper .col .main-content .col-1 .card.dark-mode .row-1 svg.dark-mode,
+.wrapper
+    .col
+    .mid-content
+    .col-2
+    .row-2
+    .card-width
+    .row-1
+    svg.lucide.lucide-repeat2-icon.lucide-repeat-2.dark-mode,
+.wrapper .col .mid-content .col-1 .card-width .row-1 p.dark-mode,
+.wrapper .col .main-content .col-3 .card-height .row-1 p.dark-mode,
+.wrapper .col .main-content .col-3 .card-height .row-2 p.dark-mode,
+.wrapper .col .mid-content .col-2 .row-2 .card-width .row-1 p.dark-mode,
+.wrapper .col .main-content .tab-content p.dark-mode {
+    color: white;
+    transition: color 0.5s ease;
+}
+
+.dark-mode {
+    color: #fff !important;
+}
+
+.table-grid-5.table-items.dark-mode {
+    background-color: rgb(33, 43, 52) !important;
+    color: white !important;
+    transition: background-color 0.5s ease, color 0.5s ease !important;
+}
+
+.table-grid-5.dark-mode .name,
+.table-grid-5.dark-mode .address,
+.table-grid-5.dark-mode .date,
+.table-grid-5.dark-mode .status,
+.table-grid-5.dark-mode .price {
+    color: white !important;
+    transition: color 0.5s ease;
+}
+
+.wrapper .col .main-content .tab-content p {
+    font-weight: 600;
+    font-size: 24px;
+    color: #4e56c0;
+}
+
+.wrapper .col .main-content .content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.wrapper .col .main-content .content,
+.wrapper .col .main-content .content .mid-content {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.wrapper .col .main-content .content .col-1,
+.wrapper .col .main-content .content .col-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wrapper .col .main-content .content .col-3 {
+    display: flex;
+    gap: 10px;
+}
+
+.wrapper .col .main-content .content .card {
+    width: 200px;
+    height: 110px;
+    background-color: white;
+    border-radius: 15px;
+    transition: background-color 0.5s ease;
+}
+
+.wrapper .col .main-content .content .card .row-1 {
+    display: flex;
+    justify-content: space-between;
+    height: 42px;
+}
+
+.wrapper .col .main-content .content .card .row-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper .col .main-content .col-1 .card .row-2 p span,
+.wrapper .col .main-content .col-2 .card .row-2 p span {
+    color: #44444e;
+}
+
+.wrapper .col .main-content .content .card .row-2 p.indicator-order {
+    font-size: 25px;
+    margin: 0 20px 0 20px;
+}
+
+.wrapper .col .main-content .content .card .row-2 p.chance-order {
+    margin: 7px 20px 0 20px;
+    font-size: 12px;
+}
+
+.wrapper .col .main-content .content .card .row-2 p.chance-order svg {
+    margin: 0;
+    margin-right: 5px;
+}
+
+.wrapper .col .main-content .content .card .row-2 p.trending-up,
+.wrapper .col .main-content .content .card .row-2 svg.trending-up {
+    color: green;
+}
+
+.wrapper .col .main-content .content .card .row-2 p.trending-down,
+.wrapper .col .main-content .content .card .row-2 svg.trending-down {
+    color: red;
+}
+
+.wrapper .col .main-content .content .card-height {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 230px;
+    background-color: white;
+    border-radius: 15px;
+    transition: background-color 0.5s ease;
+}
+
+.wrapper .col .main-content .content .col-3 .card-height {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.wrapper .col .main-content .content .col-3 .card-height .row-1 {
+    height: 45px;
+}
+
+.wrapper .col .main-content .content .col-3 .card-height .row-1 p {
+    margin-bottom: 5px;
+}
+
+.wrapper .col .main-content .content .col-3 .card-height .row-2 p {
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.wrapper .col .main-content .content .col-3 .card-height .row-2 span {
+    margin: 0px 20px 0px 20px;
+    font-weight: 600;
+}
+
+.wrapper .col .main-content .content .col-3 .card-height .row-3 .chart-wrapper {
+    display: flex;
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    justify-content: space-evenly;
+    transition: background 0.5s ease;
+}
+
+.wrapper
+    .col
+    .main-content
+    .content
+    .col-3
+    .card-height
+    .row-3
+    .chart-wrapper
+    .col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.wrapper
+    .col
+    .main-content
+    .content
+    .col-3
+    .card-height
+    .row-3
+    .chart-wrapper
+    .col-2
+    canvas {
+    width: 80px !important;
+    height: 80px !important;
+}
+
+.wrapper
+    .col
+    .main-content
+    .content
+    .col-3
+    .card-height
+    .row-3
+    .chart-wrapper
+    .col-1
+    #legend-container-users
+    ul,
+.wrapper
+    .col
+    .main-content
+    .content
+    .col-3
+    .card-height
+    .row-3
+    .chart-wrapper
+    .col-1
+    #legend-container-subscriptions
+    ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.wrapper
+    .col
+    .main-content
+    .content
+    .col-3
+    .card-height
+    .row-3
+    .chart-wrapper
+    .col-1
+    #legend-container-users
+    li,
+.wrapper
+    .col
+    .main-content
+    .content
+    .col-3
+    .card-height
+    .row-3
+    .chart-wrapper
+    .col-1
+    #legend-container-subscriptions
+    li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    font-size: 8px;
+}
+.wrapper
+    .col
+    .main-content
+    .content
+    .col-3
+    .card-height
+    .row-3
+    .chart-wrapper
+    .col-1
+    #legend-container-users
+    li
+    span,
+.wrapper
+    .col
+    .main-content
+    .content
+    .col-3
+    .card-height
+    .row-3
+    .chart-wrapper
+    .col-1
+    #legend-container-subscriptions
+    li
+    span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+.wrapper .col .main-content .content .card p,
+.wrapper .col .main-content .content .card-height p,
+.wrapper .col .main-content .mid-content .col-1 .card-width p,
+.wrapper .col .main-content .mid-content .col-2 .row-2 .card-width p {
+    margin: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #44444e;
+}
+
+.wrapper .col .main-content .content .card svg {
+    margin: 20px;
+    color: #4e56c0;
+}
+
+.wrapper .col .main-content .mid-content .col-1 .card-width,
+.wrapper .col .main-content .mid-content .col-2 .row-2 .card-width {
+    background-color: white;
+    width: 410px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.5s ease;
+}
+
+.wrapper .col .main-content .mid-content .col-1 .card-width .row-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-1
+    .card-width
+    .row-1
+    .select-dropdown {
+    height: 20px;
+    border: none;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-1
+    .card-width
+    .row-1
+    .select-dropdown
+    .selected {
+    margin-bottom: 5px;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-1
+    .card-width
+    .row-1
+    .select-dropdown
+    .selected
+    svg {
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-1
+    .card-width
+    .row-1
+    .select-dropdown
+    .dropdown-items {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 10;
+    padding: 5px;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-1
+    .card-width
+    .row-1
+    .select-dropdown.open
+    .dropdown-items {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    opacity: 1;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-1
+    .card-width
+    .row-1
+    .select-dropdown
+    .dropdown-items
+    div {
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-1
+    .card-width
+    .row-1
+    .select-dropdown
+    .dropdown-items
+    div
+    p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-1
+    .card-width
+    .row-1
+    .select-dropdown.open
+    .dropdown-items
+    div:hover {
+    opacity: 0.8;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-1
+    .card-width
+    .row-1
+    .select-dropdown
+    div {
+    border: none;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-1
+    .card-width
+    .row-2
+    .chart-wrapper.sales-dynamics {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-1
+    .card-width
+    .row-2
+    .chart-wrapper.sales-dynamics
+    canvas {
+    width: 380px !important;
+    height: 135px !important;
+}
+
+.wrapper .col .main-content .mid-content {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.wrapper .col .main-content .mid-content .col-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wrapper .col .main-content .mid-content .col-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wrapper .col .main-content .mid-content .col-2 .row-1 {
+    display: flex;
+    gap: 10px;
+}
+
+.wrapper .col .main-content .mid-content .col-2 .row-1 .card {
+    background-color: white;
+    width: 200px;
+    height: 150px;
+    border-radius: 15px;
+    transition: background-color 0.5s ease;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-2
+    .row-1
+    .card
+    .row-1
+    .chart-container-invoices {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    margin: 20px auto auto;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-2
+    .row-1
+    .card
+    .row-1
+    .chart-container-received {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    margin: 20px auto auto;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-2
+    .row-1
+    .card
+    .row-2
+    p.title-invoice {
+    margin: 0 20px 5px 20px;
+    font-size: 12px;
+    font-weight: 100;
+    opacity: 0.7;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-2
+    .row-1
+    .card
+    .row-2
+    p.indicator-invoice {
+    margin: 0 20px 0 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.wrapper .col .main-content .mid-content .col-2 .row-1 .card svg {
+    margin: 20px;
+    color: #4e56c0;
+}
+
+.wrapper .col .main-content .mid-content .col-2 .row-2 {
+    width: 100%;
+}
+
+.wrapper .col .main-content .mid-content .col-2 .row-2 .card-width .row-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .col .main-content .mid-content .col-2 .row-2 .card-width .row-1 svg {
+    margin: 20px;
+    color: #4e56c0;
+    cursor: pointer;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-2
+    .row-2
+    .card-width
+    .row-2
+    .table-header-container {
+    margin: 20px 0px 20px 0px;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-2
+    .row-2
+    .card-width
+    .row-2
+    .table-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 5px;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-2
+    .row-2
+    .card-width
+    .row-2
+    .table-grid-5
+    .table-header {
+    font-size: 10px;
+    text-align: center;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-2
+    .row-2
+    .card-width
+    .row-2
+    .table-grid-5
+    .table-item {
+    display: flex;
+    font-size: 10px;
+    font-weight: 600;
+    color: #44444e;
+    margin: 10px 0px 10px 10px;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-2
+    .row-2
+    .card-width
+    .row-2
+    .table-grid-5
+    .table-item
+    img {
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-2
+    .row-2
+    .card-width
+    .row-2
+    .table-grid-5
+    .table-item
+    p {
+    display: inline;
+    vertical-align: middle;
+    margin: 0;
+    font-size: 10px;
+    margin: auto;
+}
+
+.wrapper
+    .col
+    .main-content
+    .mid-content
+    .col-2
+    .row-2
+    .card-width
+    .row-2
+    .table-grid-5
+    .table-item
+    .address {
+    margin-left: 5px;
+}
+
+/* From Uiverse.io by JustCode14 */
+/* Theme Switch */
+/* The switch - the box around the slider */
+
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 4em;
+    height: 2.2em;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2a2a2a;
+    transition: 0.4s;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.2em;
+    width: 1.2em;
+    border-radius: 20px;
+    left: 0.5em;
+    bottom: 0.5em;
+    transition: 0.4s;
+    transition-timing-function: cubic-bezier(0.81, -0.04, 0.38, 1.5);
+    box-shadow: inset 8px -4px 0px 0px #fff;
+}
+
+.switch input:checked + .slider {
+    background-color: #00a6ff;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(1.8em);
+    box-shadow: inset 15px -4px 0px 15px #ffcf48;
+}
+
+.star {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    width: 5px;
+    transition: all 0.4s;
+    height: 5px;
+}
+
+.star_1 {
+    left: 2.5em;
+    top: 0.5em;
+}
+
+.star_2 {
+    left: 2.2em;
+    top: 1.2em;
+}
+
+.star_3 {
+    left: 3em;
+    top: 0.9em;
+}
+
+.switch input:checked ~ .slider .star {
+    opacity: 0;
+}
+
+.cloud {
+    width: 3.5em;
+    position: absolute;
+    bottom: -1.4em;
+    left: -1.1em;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.switch input:checked ~ .slider .cloud {
+    opacity: 1;
+}
