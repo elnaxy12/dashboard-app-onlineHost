@@ -1,6 +1,3 @@
-import Chart from "https://cdn.jsdelivr.net/npm/chart.js";
-import "./animate.js";
-
 // ===============================
 // 🔹 Donut Chart with HTML Legend
 // ===============================
